@@ -1,6 +1,5 @@
 package linkedlist;
 
-import sun.awt.image.ImageWatched;
 
 public class LinkedList {
 
