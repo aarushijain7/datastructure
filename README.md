@@ -1,2 +1,2 @@
 # datastructure
-Basic Data Structures like tree, linked lists etc
+Leetcode questions like Data Structures( tree, linked lists, graphs etc), Arrays, etc.
