@@ -36,43 +36,43 @@ public class RemoveNthNodeFromEnd {
         left.next=left.next.next;
         return head;
     }
-    public static ListNode removeNthFromEndInEfficient(ListNode head, int n) {
-        if(head==null){
-            return head;
-        }
-        Stack<ListNode> stack = new Stack<>();
-        ListNode traverse = head;
-        while(traverse!=null) {
-            stack.push(traverse);
-            traverse = traverse.next;
-        }
-        ListNode nodeToBeDeleted = null;
-
-        for (int index=1;index<=n;index++){
-            if(!stack.isEmpty()){
-                nodeToBeDeleted = stack.pop();
-            }else {
-                return head;
-            }
-        }
-        if(head==nodeToBeDeleted){
-            head = head.next;
-            return head;
-        }
-        /*if (head.next == nodeToBeDeleted && head.next == null) {
-            head.next = null;
-            return head;
-        }*/
-        ListNode prev = head, curr = head.next, next = curr.next;
-        while (curr!=nodeToBeDeleted){
-            prev=prev.next;
-            curr=curr.next;
-            next=next.next;
-        }
-
-        prev.next=next;
-
-        return head;
-
-    }
+//    public static ListNode removeNthFromEndInefficient(ListNode head, int n) {
+//        if(head==null){
+//            return head;
+//        }
+//        Stack<ListNode> stack = new Stack<>();
+//        ListNode traverse = head;
+//        while(traverse!=null) {
+//            stack.push(traverse);
+//            traverse = traverse.next;
+//        }
+//        ListNode nodeToBeDeleted = null;
+//
+//        for (int index=1;index<=n;index++){
+//            if(!stack.isEmpty()){
+//                nodeToBeDeleted = stack.pop();
+//            }else {
+//                return head;
+//            }
+//        }
+//        if(head==nodeToBeDeleted){
+//            head = head.next;
+//            return head;
+//        }
+//        /*if (head.next == nodeToBeDeleted && head.next == null) {
+//            head.next = null;
+//            return head;
+//        }*/
+//        ListNode prev = head, curr = head.next, next = curr.next;
+//        while (curr!=nodeToBeDeleted){
+//            prev=prev.next;
+//            curr=curr.next;
+//            next=next.next;
+//        }
+//
+//        prev.next=next;
+//
+//        return head;
+//
+//    }
 }
